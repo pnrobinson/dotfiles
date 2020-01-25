@@ -9,9 +9,8 @@ nosetests tests/
 
 pydoc
 ~~~~~
-Use to show/search/create documentation
+Use to show/search/create documentation. ::
 
-  .. code-block:: python
   $ python -m pydoc   # show features of pydoc
   $ python -m pydoc -k sql # search all installed modules for 'sql'
   $ sudo python -m pydoc -p 3212  # start documentation browser on port 3212 (quit with q/ctrl-C)
