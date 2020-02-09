@@ -37,7 +37,7 @@ Stepping through the program
 
 To step through the program, set at least one break point. We run the program with the ``run`` command and can
 inspect the value of a variable x with the ``print`` command. We can set x to a new value with the ``set`` command. We can go to the
-next line with the ``n`` command. ::
+next line with the ``n`` command (next line, ,including function calls) or ``s`` (next step). ::
   
   (gdb) run
   (gdb) print x
@@ -50,5 +50,6 @@ Interesting command
 1. ``(gdb) set args arglist``           specify arglist for next run
 2. ``(gdb) set args``                   specify empty arglist for next run
 3. ``(gdb) show args``                  display current args
-4. ``(gdb) b file:lineno``                set break point in file at line n, e.g. ``b main.c:14``
+4. ``(gdb) b file:lineno``              set break point in file at line n, e.g. ``b main.c:14``
+5. ``(gdb) delete 2``                   delete breakpoint 2 (use ``info b`` to see the breakpoint numbers)
   
