@@ -43,3 +43,12 @@ next line with the ``n`` command. ::
   (gdb) print x
   (gdb) set x 42
   
+Interesting command
+~~~~~~~~~~~~~~~~~~~
+
+
+1. ``(gdb) set args arglist``           specify arglist for next run
+2. ``(gdb) set args``                   specify empty arglist for next run
+3. ``(gdb) show args``                  display current args
+4. ``(gdb) b file:lineno                set break point in file at line n, e.g. ``b main.c:14``
+  
