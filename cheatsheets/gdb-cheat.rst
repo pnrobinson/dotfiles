@@ -73,10 +73,10 @@ Open the Keychain Access application (can be found in Applications/Utilities dir
 5. For the property, Keychain, choose ``System``from the drop-down list and click ``Create``.
 6. Now go back to the main window, choose the System keychain in the sidebar on the left, and select the newly created certificate from the list. Open the context menu and select Get Info. Chose ``Always trust``
 
- In order to make the certificate immediately available for signing, we need to restart the Taskgate access-control service.
+In order to make the certificate immediately available for signing, we need to restart the Taskgate access-control service.
  
- 1. Open the Activity Monitor (found in Applications/Utilities)
- 2. Open it and filter the list of processes by typing ``taskgated`` in the search field in the toolbar.  There will be one process. Stop it. Wait for it to restart or reboot if necessary
- 3. Finally, open a terminal window and enter the following command. ::
+1. Open the Activity Monitor (found in Applications/Utilities)
+2. Open it and filter the list of processes by typing ``taskgated`` in the search field in the toolbar.  There will be one process. Stop it. Wait for it to restart or reboot if necessary
+3. Finally, open a terminal window and enter the following command. ::
  
     codesign -s gdbcert /usr/local/bin/gdb
