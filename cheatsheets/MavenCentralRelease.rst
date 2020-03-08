@@ -52,3 +52,8 @@ again
 
 8. having passed through all validations hit the Release button and the new release should appear in
 Maven Central Repository within a few hours!
+
+And on to the next version
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Adjust the version of the pom files in the develop branch, usually by bumping the minor version and adding ``-SNAPSHOT``.
