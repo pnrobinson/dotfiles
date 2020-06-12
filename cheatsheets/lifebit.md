@@ -10,7 +10,7 @@ conda install -c conda-forge r-snakecase -y
 conda install -c conda-forge r-statmod -y
 conda install -c bioconda bioconductor-stan -y
 conda install -c bioconda bioconductor-rtracklayer -y
-conda install -c conda-forge r-pheatmap
+conda install -c conda-forge r-pheatmap -y
 conda install -c r r-reshape2 -y
 ```
 
