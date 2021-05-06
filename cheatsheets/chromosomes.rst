@@ -14,3 +14,5 @@ Chromosome accession numbers
      - CM000667.2
    * - chr16
      - CM000678.2
+   * - chrX
+     - CM000685.2
