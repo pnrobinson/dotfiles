@@ -10,6 +10,8 @@ Chromosome accession numbers
 
    * - Chromosome, 
      - Accession
+   * - chr4
+     - CM000666.2
    * - chr5
      - CM000667.2
    * - chr16
