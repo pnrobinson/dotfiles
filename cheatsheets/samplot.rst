@@ -19,3 +19,4 @@ Running
    --dpi 1000 -w 3000 -o TMP.png
   
   
+Note that in the current setup, we need to be in the same directory as the BAM file for samplot to find them.
