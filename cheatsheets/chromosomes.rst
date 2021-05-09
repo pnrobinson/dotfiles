@@ -18,6 +18,8 @@ Chromosome accession numbers
      - CM000667.2
    * - chr7
      - CM000669.2
+   * - chr9
+     - CM000671.2
    * - chr16
      - CM000678.2
    * - chr19
