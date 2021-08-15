@@ -3,6 +3,20 @@ git cheat sheet
 ###############
 
 
+Support for password authentication was removed on August 13, 2021
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- sign in to your GitHub account
+- go to *settings* (menu on top right), and then to *developer settings*
+- go to *Personal access tokens*
+- generate token with desired duration and settings, copy somewhere safe
+- If you are using the git-credentials manager (which lives at ``~./.git-credentials``), then alter that file to show
+
+```
+https://<username>:<personal-access-key>@github.com
+
+```
+
 
 
 checkout remote branch to local
