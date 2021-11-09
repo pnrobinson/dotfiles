@@ -38,6 +38,11 @@ To install the pgadmin tool for working with posgreSQL, enter the following comm
    sudo apt update
    sudo apt install pgadmin4
 
+On my system, pgadmin4 did not get installed into PATH, but was available here. ::
+
+   /usr/pgadmin4/bin/pgadmin4
+
+
 
 Import CSV data as OMOP
 =======================
