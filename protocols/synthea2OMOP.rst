@@ -55,3 +55,10 @@ Note to install the package, you probably need to perform the following as sudo.
 
    install.packages("devtools")
    devtools::install_github("OHDSI/ETL-Synthea")
+   
+If you get this error when installing the second package: ``configure: error: Java interpreter '/usr/lib/jvm/default-java/bin/java' does not work``, then run this command and try again.
+
+.. code-block::
+
+   sudo R CMD javareconf
+
