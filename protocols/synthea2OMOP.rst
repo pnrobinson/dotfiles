@@ -47,3 +47,11 @@ We do this step with the `ETL-Synthea <https://github.com/OHDSI/ETL-Synthea>`_ p
 - syntheaFileLoc <- "/../csv" (path to the CSV file directory created by ``synthea-with-dependencies.jar``)
 - vocabFileLoc   <- "/../omop5" (path to the downloaded OMOP CDM data from above)
 - posgreSQL user name and password.
+
+
+Note to install the package, you probably need to perform the following as sudo.
+
+.. code-block::
+
+   install.packages("devtools")
+   devtools::install_github("OHDSI/ETL-Synthea")
