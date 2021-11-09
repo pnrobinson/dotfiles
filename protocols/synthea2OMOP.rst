@@ -12,8 +12,9 @@ synthea
 
 .. code-block::
    
-     java -jar synthea-with-dependencies.jar -p 1000 --exporter.csv.export true
+     java -jar synthea-with-dependencies.jar -p 100000 --exporter.csv.export true
 
+This outputs a file called ``output`` (we will need the path to the directory below).
 
 By default, it outputs FHIR and so the ``--exporter.csv.export true`` option is used to prepare data we can import to postgreSQL. The ``-p`` option controls the number of generated patients.
 
@@ -71,4 +72,52 @@ If you get this error when installing the second package: ``configure: error: Ja
 .. code-block::
 
    sudo R CMD javareconf
+   
+   When you run the R script, start with the following.
+   
+   .. code-block::
+   
+      library(ETLSyntheaBuilder)
+      cd <- DatabaseConnector::createConnectionDetails(
+         dbms     = "postgresql", 
+         server   = "localhost/synthea10", 
+         user     = "postgres", 
+         password = "lollipop", 
+         port     = 5432
+      )
+      
+  This may lead to an error message, Error: The folder location pathToDriver = '' does not exist.Please set the folder to the location containing the JDBC driver.You can download most drivers using the `downloadJdbcDrivers()` function. If so, enter the following (adjust the path as needed).
+  
+ .. code-block::
+ 
+   downloadJdbcDrivers(pathToDriver='/home/user/path/', dbms='postgresql')
+   
+  
+ This will download a file like ``postgresql-42.2.18.jar``.  Now adjust the previous code block as follows (note: the path is to the directory that contains the ``postgresql-42.2.18.jar`` file).
+  
+  .. code-block::
+ 
+   cd <- DatabaseConnector::createConnectionDetails(
+      dbms     = "postgresql", 
+      server   = "localhost/synthea10", 
+      user     = "postgres", 
+      password = "lollipop", 
+      port     = 5432,
+      pathToDriver = "/home/user/path/"
+   )
+  
+  This should not work with no errors.
+  
+  Enter the following lines, but adjust the paths as described above.
+  
+.. code-block::  
+
+   cdmSchema      <- "cdm_synthea10"
+   cdmVersion     <- "5.4"
+   syntheaVersion <- "2.7.0"
+   syntheaSchema  <- "native"
+   syntheaFileLoc <- "/tmp/synthea/output/csv"
+   vocabFileLoc   <- "/tmp/Vocabulary_20181119"
+ 
+
 
