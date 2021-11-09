@@ -23,8 +23,27 @@ Downloading the OMOP CDM data
 Go to the `Athena <https://athena.ohdsi.org> site, register if necessary, and download the complete vocabulary (the server will ask you for a name for the downloaded data, enter omop5 - and download version 5). Note that Athena will send a download link to the email with which you registered.
 
 
-postgreSQL
-==========
+Install postgreSQL
+==================
 
-We will set up a postgreSQL server to hold the data.
+We will set up a postgreSQL server to hold the data. First install the following packages. ::
 
+   sudo apt-get install postgresql-12 
+   sudo apt-get install postgresql-client-12
+
+To install the pgadmin tool for working with posgreSQL, enter the following commands. ::
+
+   curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add -
+   sudo sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/focal pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list' 
+   sudo apt update
+   sudo apt install pgadmin4
+
+
+Import CSV data as OMOP
+=======================
+
+We do this step with the `ETL-Synthea <https://github.com/OHDSI/ETL-Synthea>`_ project. We follow the step-by-step example shown there (and R script) and need to set the following variables:
+
+- syntheaFileLoc <- "/../csv" (path to the CSV file directory created by ``synthea-with-dependencies.jar``)
+- vocabFileLoc   <- "/../omop5" (path to the downloaded OMOP CDM data from above)
+- posgreSQL user name and password.
