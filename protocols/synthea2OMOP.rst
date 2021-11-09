@@ -43,6 +43,11 @@ On my system, pgadmin4 did not get installed into PATH, but was available here. 
    /usr/pgadmin4/bin/pgadmin4
 
 
+Set up the schema/database for synthea
+======================================
+
+Start pgadmin4. Create a new server with name ``synthea10`` and set the server to ``localhost`` and keep the port 5432. You will need to enter the posgreSQL admin password for this step.
+
 
 Import CSV data as OMOP
 =======================
