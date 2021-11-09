@@ -12,7 +12,7 @@ synthea
 
 .. code-block::
    
-     java -jar synthea-with-dependencies.jar -p 100000 --exporter.csv.export true
+     java -jar synthea-with-dependencies.jar -p 1000 --exporter.csv.export true
 
 This outputs a file called ``output`` (we will need the path to the directory below).
 
@@ -22,6 +22,9 @@ Downloading the OMOP CDM data
 =============================
 
 Go to the `Athena <https://athena.ohdsi.org> site, register if necessary, and download the complete vocabulary (the server will ask you for a name for the downloaded data, enter omop5 - and download version 5). Note that Athena will send a download link to the email with which you registered.
+This will download a file like ``vocabulary_download_v5_{4a96d00f-19ba-43d9-bdb1-e260d7f8c8df}_1636473814003.zip``
+Unzipping this (which occurs in the same directory) produces CSVs of the CMD.
+
 
 
 Install postgreSQL
@@ -119,5 +122,14 @@ If you get this error when installing the second package: ``configure: error: Ja
    syntheaFileLoc <- "/tmp/synthea/output/csv"
    vocabFileLoc   <- "/tmp/Vocabulary_20181119"
  
+ 
+The next command gives an error
+ 
+ .. code-block::  
+   ETLSyntheaBuilder::CreateCDMTables(connectionDetails = cd, cdmSchema = cdmSchema, cdmVersion = cdmVersion)
+   Error in loadNamespace(x) : there is no package called ‘CommonDataModel’
+   
+Do we need to install something like this? https://github.com/OHDSI/CommonDataModel
+
 
 
