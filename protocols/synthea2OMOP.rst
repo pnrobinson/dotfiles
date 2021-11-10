@@ -76,7 +76,7 @@ If you get this error when installing the second package: ``configure: error: Ja
 
    sudo R CMD javareconf
    
-   When you run the R script, start with the following.
+When you run the R script, start with the following.
    
    .. code-block::
    
