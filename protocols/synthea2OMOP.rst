@@ -78,36 +78,36 @@ If you get this error when installing the second package: ``configure: error: Ja
    
 When you run the R script, start with the following.
    
-   .. code-block::
+.. code-block::
    
-      library(ETLSyntheaBuilder)
-      cd <- DatabaseConnector::createConnectionDetails(
+     library(ETLSyntheaBuilder)
+     cd <- DatabaseConnector::createConnectionDetails(
          dbms     = "postgresql", 
          server   = "localhost/synthea10", 
          user     = "postgres", 
          password = "lollipop", 
          port     = 5432
-      )
+     )
       
-  This may lead to an error message, Error: The folder location pathToDriver = '' does not exist.Please set the folder to the location containing the JDBC driver.You can download most drivers using the `downloadJdbcDrivers()` function. If so, enter the following (adjust the path as needed).
+This may lead to an error message, Error: The folder location pathToDriver = '' does not exist.Please set the folder to the location containing the JDBC driver.You can download most drivers using the `downloadJdbcDrivers()` function. If so, enter the following (adjust the path as needed).
   
- .. code-block::
+.. code-block::
  
    downloadJdbcDrivers(pathToDriver='/home/user/path/', dbms='postgresql')
    
   
  This will download a file like ``postgresql-42.2.18.jar``.  Now adjust the previous code block as follows (note: the path is to the directory that contains the ``postgresql-42.2.18.jar`` file).
   
-  .. code-block::
+.. code-block::
  
-   cd <- DatabaseConnector::createConnectionDetails(
+  cd <- DatabaseConnector::createConnectionDetails(
       dbms     = "postgresql", 
       server   = "localhost/synthea10", 
       user     = "postgres", 
       password = "lollipop", 
       port     = 5432,
       pathToDriver = "/home/user/path/"
-   )
+  )
   
   This should not work with no errors.
   
