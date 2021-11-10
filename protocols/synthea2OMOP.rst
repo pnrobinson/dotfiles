@@ -109,9 +109,8 @@ This may lead to an error message, Error: The folder location pathToDriver = '' 
       pathToDriver = "/home/user/path/"
   )
   
-  This should not work with no errors.
-  
-  Enter the following lines, but adjust the paths as described above.
+This should not work with no errors.
+Enter the following lines, but adjust the paths as described above.
   
 .. code-block::  
 
