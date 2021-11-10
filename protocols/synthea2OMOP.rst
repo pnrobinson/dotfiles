@@ -26,6 +26,15 @@ This will download a file like ``vocabulary_download_v5_{4a96d00f-19ba-43d9-bdb1
 Unzipping this (which occurs in the same directory) produces CSVs of the CMD.
 
 
+Install R package with OMOP common data model
+=============================================
+
+
+.. code-block::
+   
+   devtools::install_github("OHDSI/CommonDataModel", "v5.4")
+
+
 
 Install postgreSQL
 ==================
