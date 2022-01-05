@@ -40,3 +40,14 @@ and then  ::
     rm $f2
     mv $f3 $f2
   done
+  
+  
+##########################
+Installing packages on Mac
+##########################
+
+Assuming we have installed just a smaller Tex package with brew, many tex packages will be missing. ::
+
+  sudo chown -R robinp /usr/local/texlive
+  tlmgr update --self
+  tlmgr install comment
